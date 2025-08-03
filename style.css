@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: #DBE2EF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main #card {
+  height: 60%;
+  width: 30%;
+  background-color: #112D4E;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#main #card #search-field input {
+  background-color: #DBE2EF;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 80%;
+  font-size: 1.4rem;
+}
+#main #card #search-field button {
+  background-color: #DBE2EF;
+  border: none;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+#main #card #search-field button:hover {
+  scale: 0.95;
+  cursor: pointer;
+}
+#main #card #profile {
+  height: 20%;
+  background-color: red;
+}
+#main #card #stats {
+  height: 20%;
+  background-color: seashell;
+}/*# sourceMappingURL=style.css.map */
