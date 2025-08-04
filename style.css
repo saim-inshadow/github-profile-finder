@@ -8,51 +8,184 @@
 html, body {
   height: 100%;
   width: 100%;
+  background-color: #01050F;
 }
 
 #main {
   height: 100%;
   width: 100%;
-  background-color: #DBE2EF;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#main #card {
-  height: 60%;
-  width: 30%;
-  background-color: #112D4E;
-  border-radius: 20px;
+#main #container {
+  height: 80vh;
+  width: 60vw;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#main #container h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: white;
+}
+#main #container p {
+  text-align: center;
+  color: white;
+}
+#main #container #search-field {
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #1C2838;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+#main #container #search-field input {
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: 70%;
+  font-size: 1.4rem;
+}
+#main #container #search-field input:focus {
+  outline: none;
+}
+#main #container #search-field button {
+  background-color: #60a5fa;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  border-radius: 7px;
+}
+#main #container #search-field button:hover {
+  scale: 0.95;
+  cursor: pointer;
+  background-color: #4f86ca;
+}
+#main #container #profile {
+  margin-top: 2rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid rgb(134, 131, 131);
+  border-radius: 10px;
+  background-color: #0F1626;
+}
+#main #container #profile #not-found {
+  margin: auto auto;
+  color: white;
+}
+#main #container #profile #pfp {
+  width: 20vw;
+  padding: 0px 20px;
+}
+#main #container #profile #pfp img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#main #container #profile #user-data {
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-#main #card #search-field input {
-  background-color: #DBE2EF;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 10px;
-  width: 80%;
-  font-size: 1.4rem;
+#main #container #profile #user-data h2 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
 }
-#main #card #search-field button {
-  background-color: #DBE2EF;
-  border: none;
-  font-weight: 300;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 1.4rem;
+#main #container #profile #user-data #username {
+  color: #787b80;
+  text-align: left;
+  font-size: 1.1rem;
 }
-#main #card #search-field button:hover {
-  scale: 0.95;
-  cursor: pointer;
+#main #container #profile #user-data #bio {
+  font-size: 1.3rem;
+  text-align: left;
 }
-#main #card #profile {
-  height: 20%;
-  background-color: red;
+#main #container #profile #user-data #extra-information {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
-#main #card #stats {
-  height: 20%;
-  background-color: seashell;
+#main #container #profile #user-data #extra-information p {
+  font-size: 1.5rem;
+}
+#main #container #profile #user-data #extra-information .bold {
+  font-weight: 600;
+}
+#main #container #footer {
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: rgb(207, 207, 207);
+}
+
+@media (max-width: 1150px) {
+  #main #container {
+    width: 90%;
+  }
+  #main #container #search-field {
+    padding: 5px 8px;
+  }
+  #main #container #search-field input {
+    font-size: 1.3rem;
+  }
+  #main #container #search-field button {
+    font-size: 1.3rem;
+  }
+  #main #container #profile {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #main #container #profile #pfp {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #main #container #user-data #extra-information {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  #main #container #user-data #extra-information p {
+    font-size: 1.5rem !important;
+    text-align: left !important;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 650px) {
+  #main #container {
+    width: 90%;
+  }
+  #main #container #search-field {
+    padding: 5px 8px;
+  }
+  #main #container #search-field input {
+    font-size: 1rem;
+  }
+  #main #container #search-field button {
+    font-size: 15px;
+  }
+  #main #container #profile #user-data h2 {
+    font-size: 1.5rem;
+  }
+  #main #container #user-data #extra-information p {
+    font-size: 3.4vw !important;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -7,54 +7,204 @@
 html, body{
     height: 100%;
     width: 100%;
+    background-color: #01050F;
 }
 #main{
     height: 100%;
     width: 100%;
-    background-color: #DBE2EF;
     display: flex;
     align-items: center;
     justify-content: center;
-    #card{
-        height: 60%;
-        width: 30%;
-        background-color: #112D4E;
-        border-radius: 20px;
+    #container{
+        height: 80vh;
+        width: 60vw;
+        // background-color: rgb(131, 135, 170);
         padding: 2rem;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        h1{
+            text-align: center;
+            font-size: 2.8rem;
+            color: white;
+        }
+        p{
+            text-align: center;
+            color: white;
+        }
         #search-field{
+            width: 100%;
+            margin-top: 2rem;
+            background-color: #1C2838;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            
             input{
-                background-color: #DBE2EF;
                 border: none;
-                padding: 5px 10px;
-                border-radius: 10px;
-                width: 80%;
+                background-color: transparent;
+                color: white;
+                width: 70%;
                 font-size: 1.4rem;
+                
+                &:focus{
+                    outline: none;
+                    
+                }
+               
             }
             button{
-                background-color:#DBE2EF;
+                background-color: #60a5fa;
                 border: none;
-                font-weight: 300;
+                color: white;
                 padding: 5px 10px;
-                border-radius: 10px;
                 font-size: 1.4rem;
+                border-radius: 7px;
                 &:hover{
                     scale: 0.95;
                     cursor: pointer;
+                    background-color: #4f86ca;
                 }
             }
         }
         #profile{
-            height: 20%;
-            background-color: red;
+            margin-top: 2rem;
+            height: fit-content;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border: 1px solid rgb(134, 131, 131);
+            border-radius: 10px;
+            background-color: #0F1626;
+            #not-found{
+                margin: auto auto;
+                color: white;
+            }
+            #pfp{
+                width: 20vw;
+                padding: 0px 20px;
+                    img{
+                    height: 120px;
+                    width: 120px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            #user-data{
+                
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                // background-color: seagreen;
+                h2{
+                    font-size: 2rem;
+                    color: white;
+                    font-weight: 600;
+                }
+                #username{
+                    color: #787b80;
+                    text-align: left;
+                    font-size: 1.1rem;
+                }
+                #bio{
+                    font-size: 1.3rem;
+                    text-align: left;
+                }
+                #extra-information{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    p{
+                        font-size: 1.5rem;
+                    }
+                    .bold{
+                        font-weight: 600;
+                    }
+                }
+            }
         }
-        #stats{
-            height: 20%;
-            background-color: seashell;
+        #footer{
+            margin-top: 3rem;
+            font-size: 1rem;
+            color: rgb(207, 207, 207);
         }
     }
-
 }
-
+@media (max-width: 1150px) {
+    #main{
+        #container{
+            width: 90%;
+            #search-field{
+                 padding: 5px 8px;
+                input{
+                    font-size: 1.3rem;
+                }
+                button{
+                    font-size: 1.3rem;
+                }
+            }
+            #profile{
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                #pfp{
+                    width: fit-content;
+                    // background-color: red;
+                    margin-right: auto;
+                    margin-left: auto;
+                  
+                }
+            }
+            #user-data{
+                #extra-information{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0rem;
+                    p{
+                        font-size: 1.5rem !important;
+                        text-align: left !important;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px) {
+     #main{
+        #container{
+            width: 90%;
+            #search-field{
+                 padding: 5px 8px;
+                input{
+                    font-size: 1rem;
+                }
+                button{
+                    font-size: 15px;
+                }
+            }
+            #profile{
+               #user-data{
+                h2{
+                    font-size: 1.5rem;
+                }
+               }
+            }
+            #user-data{
+                #extra-information{
+                 
+                    p{
+                        font-size: 3.4vw !important;
+                       
+                    }
+                }
+            }
+        }
+    }
+}
